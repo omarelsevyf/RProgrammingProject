@@ -8,7 +8,6 @@ stringCol <- data[, c("Hospital.Name", "State")]
 numericCol <- as.data.frame(lapply(data[, c(3,4,5)], as.numeric))
 data <- cbind(stringCol, numericCol)
 
-
 #Esta funcion es utilizada para presentar el mejor hospital con la mejor calidad de servicios, tomando como referencia
 #sus mortality rates por heart attack, heart failure y pneumonia.
 best <- function(state, outcome){  
