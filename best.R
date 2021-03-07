@@ -18,6 +18,7 @@ best <- function(state, outcome){
   #1. Si el estado ingresado se encuentra en la data.
   #2. Si el outcome ingresado se encuentra en la data.
   #3. Si los argumentos cumplen con las condiciones anteriores.
+  #nota: en el argumento paste0 (^ y $) se utiliza para comparar con exactitud en la funcion de grepl
   
   if (!any(grepl(paste0("^", state, "$"), data[, "State"]))){
     stop("invalid state")
